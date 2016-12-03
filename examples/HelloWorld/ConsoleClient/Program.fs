@@ -1,9 +1,7 @@
 ﻿open System
-
 open Orleans
 open Orleans.Runtime.Configuration
-
-open FOrleans
+open Orleans.FSharp
 open Contracts
 
 [<EntryPoint>]

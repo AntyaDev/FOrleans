@@ -1,12 +1,12 @@
-﻿namespace FOrleans
+﻿namespace Orleans.FSharp
 
 [<AutoOpen>]
 module FGrain =
     open System
     open System.Threading.Tasks
     open Orleans
-    open FOrleans.Core
-    open FOrleans.Task
+    open Orleans.FSharp.Core
+    open Orleans.FSharp.Task
 
     [<AbstractClass>]
     type FGrain<'TMsg>() = 

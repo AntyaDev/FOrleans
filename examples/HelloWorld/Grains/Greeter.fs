@@ -1,7 +1,7 @@
 ﻿namespace Grains
 
 open Orleans
-open FOrleans
+open Orleans.FSharp
 open Contracts
 
 type Greeter() =

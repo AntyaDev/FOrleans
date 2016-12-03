@@ -1,7 +1,7 @@
 ﻿namespace Contracts
 
 open Orleans
-open FOrleans.Core
+open Orleans.FSharp.Core
 
 type Message = 
     | Greet of string    

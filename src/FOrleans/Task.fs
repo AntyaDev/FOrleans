@@ -1,4 +1,4 @@
-﻿namespace FOrleans
+﻿namespace Orleans.FSharp
 
 module Task =
 

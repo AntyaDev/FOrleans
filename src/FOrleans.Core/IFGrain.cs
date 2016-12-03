@@ -1,8 +1,6 @@
-using System;
 using System.Threading.Tasks;
-using Orleans;
 
-namespace FOrleans.Core
+namespace Orleans.FSharp.Core
 {
     public interface IFGrain<TMsg> : IGrain
     {
