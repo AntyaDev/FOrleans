@@ -10,10 +10,9 @@ type Greeter() =
 
     override this.Receive message = task {
         match message with
-        | Greet who -> printfn "received new message: Greet from %s" who
-                       let msg = sprintf "Hello %s" who
-                       return response(msg)
+        | Greet who -> printfn "received a new message: Greet from %s" who                       
+                       return response()
         
-        | GetName   -> printfn "received new message: GetName"
+        | GetName   -> printfn "received a new message: GetName"
                        return response("My name is Greeter!!!")
     }
