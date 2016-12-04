@@ -13,13 +13,13 @@ let main argv =
     config.TraceToConsole <- false
     GrainClient.Initialize(config)
 
-    let actor = GrainClient.GrainFactory.GetGrain<IGreeter>("test_actor")
+    let greeter = GrainClient.GrainFactory.GetGrain<IGreeter>("test_greeter")
 
     let job() = task {
-        do! actor <! Greet "AntyaDev" // tell        
-        let! name = actor <? GetName  // ask
+        do! greeter <! Greet "AntyaDev" // tell        
+        let! name = greeter <? GetName  // ask
         printfn "%s" name
-        //do! actor <! "string type" won't compile
+        //do! greeter <! "string type" won't compile
     }
 
     Task.run(job) |> ignore
