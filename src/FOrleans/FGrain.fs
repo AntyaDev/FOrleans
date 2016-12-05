@@ -16,6 +16,16 @@ module FGrain =
 
         interface IFGrain<'TMsg> with            
             member this.Tell(message) = this.Receive(message)
+    
+
+    [<AbstractClass>]
+    type FGrain<'TMsg, 'TState when 'TState: (new: unit -> 'TState)>() = 
+        inherit Grain<'TState>()
+
+        abstract Receive: message:'TMsg -> Task<obj>
+
+        interface IFGrain<'TMsg> with            
+            member this.Tell(message) = this.Receive(message)
 
 
     let inline response (data:obj) =
